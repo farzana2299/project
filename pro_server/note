@@ -1,0 +1,21 @@
+mongodb k files store cheyyan pattilla. so file store cheyyan server il thanne oru file create cheythitt string type il ath store cheyyum. aa name aan mongodb il store cheyth vakkanath..
+multer library use cheythaan files ne server il use cheyyunnath. multeroru middleware pole aan act cheyyunnath. aa middleware ethokke request ne aano file type content varanath athin mathram kodthaal mathi.
+
+multer file create cheyth import cheyyuka.(npm i multer) ennit evide store cheyyanam enn kodkkuka. athin multernta akath discstorage enna method aan use cheyyunnath. athinakath aa file evide store cheyyanam ennaan aadhyasm kodkkendath. athin destination enna function il 3 arg req,file,callback.(call back means nthaan return cheyyunnath ath call backil aan kodkkendath.) ennit a function open cheyyuka. athil callback mathram kodthaal mathi. ca;ll backil aadhyam kodkkendath error vannal nth cheyyanam ennaan ath null kodthu ath kazhinj evideaan upload aavandath enn kodkkanam. ath uploads enna file nta path kodthaal mathi.
+ath kazhinj kodkkendath file name nthaan ennan. athinum 3 arg req,file,callback.athil ooro file different name kittan date and time nameil kodkkunnund. athin use cheyyunna fn aan Date.now() ath kazinj aa file nta original name varanam. athin venditt file.originalname kodthaal mathi.
+
+ini optional feature aan. eth type il olla file aan accept cheyyanath enn kodkkanam. file.mimetype enn kodthaal file eth type aan enn check cheyyanath aan.
+
+jwt token
+
+jwt ne import cheyyuka. function create cheyyuka. athin 3 arg req,res,next
+fn nta akath token ne access cheyyuka. token header il aan ollath. token varumbol 2 words indaakum nammal kodkkunna tokenta oppom extra one word. athine remove cheyyan venditt split nta akath""[1] kodkkuka. ennit condition try-catch il kodkkuka.
+next() kodthaal mathrame jwt il ninn exit cheyyollu.
+
+
+  jwt middleware il req.payload
+  -----------------------------
+  inghana oru request ne payload nta akath store cheyyukayaanakil e middleware apply cheyyunna ella routes ntem request nta payloadnta akathe data yum access cheyth edkkan pattum. ith oru user nta id aan. ini oru user nta id aa logic il venamennindankil e middleware apply cheytha logic aanakil athil req.payload enn call cheythaal e oru id kittum. appo frontend il ninn id edkkenda ashyamilla backend il ninn thanne id kittum.
+
+  middlewarenta akath oru control vannal ath automatically exit aakilla. so exit aakan vendit next() use cheythu.
+
